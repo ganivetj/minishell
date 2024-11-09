@@ -26,6 +26,6 @@ Minishell is a project designed to help students explore the inner workings of a
   - `env` (lists environment variables)
   - `exit` (exits the shell)
 
-  ## Project Documentation
+## Project Documentation
 
 The full documentation for the Minishell project can be found [here](https://ganivetj.github.io/minishell/).
