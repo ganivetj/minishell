@@ -13,8 +13,7 @@ FILES = ft_atoi ft_bzero ft_calloc ft_isalnum ft_isalpha ft_isascii ft_isdigit \
         ft_strtrim ft_substr ft_tolower ft_toupper ft_free_2d_array \
         ft_strcmp \
         ft_printf/ft_printf ft_printf/ft_printf_2 ft_printf/ft_printf_3 \
-        ft_printf/ft_printf_4 ft_printf/ft_printf_5 ft_printf/ft_strlen \
-        ft_printf/ft_atoi ft_printf/ft_isdigit
+        ft_printf/ft_printf_4 ft_printf/ft_printf_5
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
