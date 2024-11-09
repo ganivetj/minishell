@@ -1,7 +1,3 @@
-# Minishell
-
-> A simple shell built from scratch to explore how command-line interfaces operate, inspired by Bash.
-
 ## Overview
 
 Minishell is a project designed to help students explore the inner workings of a shell:
@@ -29,3 +25,7 @@ Minishell is a project designed to help students explore the inner workings of a
   - `unset` (removes environment variables)
   - `env` (lists environment variables)
   - `exit` (exits the shell)
+
+  ## Project Documentation
+
+The full documentation for the Minishell project can be found [here](https://ganivetj.github.io/minishell/).
