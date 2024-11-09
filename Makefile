@@ -5,10 +5,8 @@ LIBFT		= $(LIBFT_DIR)/libft.a
 
 CC			= gcc
 
-# Compilation Flags
 CFLAGS		= -Wall -Wextra -Werror -g3 -fsanitize=address -I$(LIBFT_DIR) -I/usr/local/opt/readline/include
 
-# Linker Flags
 LDFLAGS		= -L/usr/local/opt/readline/lib -lreadline
 
 RM			= rm -f
@@ -43,28 +41,25 @@ SRC			= src/minishell.c \
 
 OBJ			= $(SRC:.c=.o)
 
-# Rule for generating object files, depending on libft.a
-%.o : %.c src/minishell.h $(LIBFT)
+%.o: %.c src/minishell.h
 			$(CC) $(CFLAGS) -c $< -o $@
 
-# Build target executable
-$(NAME):	$(OBJ)
-			$(MAKE) -C $(LIBFT_DIR)
+$(NAME):	$(OBJ) $(LIBFT)
 			$(CC) $(CFLAGS) $(OBJ) $(LDFLAGS) -L$(LIBFT_DIR) -lft -o $(NAME)
+
+$(LIBFT):
+			$(MAKE) -C $(LIBFT_DIR)
 
 all:		$(NAME)
 
-# Clean object files
 clean:
 			$(RM) $(OBJ)
 			$(MAKE) clean -C $(LIBFT_DIR)
 
-# Full clean including target binary
 fclean:		clean
 			$(RM) $(NAME)
 			$(MAKE) fclean -C $(LIBFT_DIR)
 
-# Rebuild all
 re:			fclean all
 
 .PHONY:		all clean fclean re
